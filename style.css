@@ -1,0 +1,75 @@
+:root {
+  --key-distance: 9%;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: dodgerblue;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.piano {
+  background-color: #fff;
+  display: flex;
+  max-width: 40rem;
+  max-height: 25rem;
+  height: 80%;
+  width: 80%;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 0 0.4rem #333;
+}
+
+.white {
+  background-color: white;
+  width: 15%;
+  height: 100%;
+  border: 1px solid #333;
+}
+
+.black {
+  background-color: black;
+  width: 2.5rem;
+  width: 10%;
+  z-index: 2;
+  position: absolute;
+  height: 60%;
+}
+
+.key:nth-child(2) {
+  left: var(--key-distance);
+}
+
+.key:nth-child(4) {
+  left: calc(var(--key-distance) * 2.35);
+  left: calc(var(--key-distance) * 2.6);
+}
+
+.key:nth-child(7) {
+  left: calc(var(--key-distance) * 5.8);
+}
+
+.key:nth-child(9) {
+  left: calc(var(--key-distance) * 6.35);
+  left: calc(var(--key-distance) * 7.35);
+}
+
+.key:nth-child(11) {
+  left: calc(var(--key-distance) * 7.65);
+  left: calc(var(--key-distance) * 9);
+}
+
+.white.press {
+  background-color: #ddd;
+}
+
+.black.press {
+  background-color: #333;
+}
